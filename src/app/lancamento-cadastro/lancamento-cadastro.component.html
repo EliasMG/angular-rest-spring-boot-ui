@@ -5,14 +5,17 @@
         <h1>Novo Lancamento</h1>
       </div>
 
+        <div class="ui-g-12">
+            <p-selectButton [options]="tipos" #tipo></p-selectButton>
+        </div>
 
         <div class="ui-g-6 ui-md-3 ui-fluid">
           <label>Vencimento</label>
           <p-calendar [locale]="pt_BR" dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
         </div>
         <div class="ui-g-6 ui-md-3 ui-fluid">
-          <label>Recebimento</label>
-          <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
+          <label>{{ tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento' }}</label>
+          <p-calendar [locale]="pt_BR" dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
         </div>
 
         <div class="ui-g-12 ui-md-9 ui-fluid">

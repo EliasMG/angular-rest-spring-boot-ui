@@ -23,5 +23,4 @@ export class LancamentosPesquisaComponent {
     { tipo: 'DESPESA', descricao: 'Mensalidade musculação', dataVencimento: new Date(2017, 6, 13),
       dataPagamento: null, valor: 180, pessoa: 'Academia Top' }
   ];
-
 }

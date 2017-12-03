@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Message } from 'primeng/components/common/api';
 
 @Component({
   selector: 'app-lancamento-cadastro',
@@ -24,6 +25,13 @@ export class LancamentoCadastroComponent implements OnInit {
     { label: 'Sebastião Souza', value: 9 },
     { label: 'Maria Abadia', value: 3 },
   ];
+
+  msgs: Message[] = [];
+
+  showError() {
+    this.msgs = [];
+    this.msgs.push({severity: 'error', detail: 'kkkkkk' });
+}
 
   constructor() { }
 
